@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'action_controller'
-require 'coffee-rails'
+require 'pogo-rails'
 
 class SiteController < ActionController::Base
   self.view_paths = File.expand_path("../support", __FILE__)
@@ -18,9 +18,9 @@ class TemplateHandlerTest < ActiveSupport::TestCase
     @app ||= DummyApp
   end
 
-  test "coffee views are served as javascript" do
+  test "pogo views are served as javascript" do
     get "/site/index.js"
 
-    assert_match "alert('hello world');\n", last_response.body
+    assert_match "alert('hello world');", last_response.body
   end
 end

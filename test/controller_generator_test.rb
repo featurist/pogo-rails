@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'rails/generators/rails/controller/controller_generator'
-require 'rails/generators/coffee/assets/assets_generator'
+require 'rails/generators/pogo/assets/assets_generator'
 
 class ControllerGeneratorTest < Rails::Generators::TestCase
   tests Rails::Generators::ControllerGenerator
@@ -12,8 +12,8 @@ class ControllerGeneratorTest < Rails::Generators::TestCase
   end
 
   def test_assets
-    run_generator %w(posts --javascript-engine=coffee --orm=false)
+    run_generator %w(posts --javascript-engine=pogo --orm=false)
     assert_no_file "app/assets/javascripts/posts.js"
-    assert_file "app/assets/javascripts/posts.js.coffee"
+    assert_file "app/assets/javascripts/posts.js.pogo"
   end
 end

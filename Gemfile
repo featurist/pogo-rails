@@ -1,7 +1,9 @@
 source "http://rubygems.org"
 
-# Specify your gem's dependencies in coffee-rails.gemspec
-gemspec
+# gemspec
+
+gem 'pogo-script'
+gem 'railties', '>= 4.0.0.beta', '< 5.0'
 
 gem "rails", git: "git://github.com/rails/rails"
 

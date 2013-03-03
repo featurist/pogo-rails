@@ -1,17 +1,17 @@
-# Coffee-Rails
+# Pogo-Rails
 
-CoffeeScript adapter for the Rails asset pipeline. Also adds support to use CoffeeScript to respond to JavaScript requests (use .js.coffee views).
+PogoScript adapter for the Rails asset pipeline. Also adds support to use PogoScript to respond to JavaScript requests (use .js.pogo views).
 
 ## Installation
 
-Since Rails 3.1 Coffee-Rails is included in the default Gemfile when you create a new application. If you are upgrading to Rails 3.1 you must add the coffee-rails to your Gemfile:
+Add pogo-rails to your Gemfile:
 
-    gem 'coffee-rails'
+    gem 'pogo-rails'
 
-If you are precompiling your assets (with rake assets:precompile) before run your application in production, you might want add it to the assets group to prevent the gem being required in the production environment.
+If you are precompiling your assets (with rake assets:precompile) before running your application in production, you might want add it to the assets group to prevent the gem being required in the production environment.
 
     group :assets do
-      gem 'coffee-rails'
+      gem 'pogo-rails'
     end
 
 ## Running tests

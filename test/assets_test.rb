@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'coffee-rails'
+require 'pogo-rails'
 
 class AssetsTest < ActiveSupport::TestCase
   def setup
@@ -19,14 +19,14 @@ class AssetsTest < ActiveSupport::TestCase
   def teardown
     FileUtils.rm_rf "#{tmp_path}/cache"
     FileUtils.rm_rf "#{tmp_path}/log"
-    File.delete "#{tmp_path}/coffee-script.js"
+    File.delete "#{tmp_path}/pogo-script.js"
   end
 
-  test "coffee-script.js is included in Sprockets environment" do
-    @app.assets["coffee-script"].write_to("#{tmp_path}/coffee-script.js")
+  test "pogo-script.js is included in Sprockets environment" do
+    @app.assets["pogo-script"].write_to("#{tmp_path}/pogo-script.js")
 
-    assert_match "/lib/assets/javascripts/coffee-script.js.erb", @app.assets["coffee-script"].pathname.to_s
-    assert_match "CoffeeScript Compiler", File.open("#{tmp_path}/coffee-script.js").read
+    assert_match "/lib/assets/javascripts/pogo-script.js.erb", @app.assets["pogo-script"].pathname.to_s
+    assert_match "PogoScript Compiler", File.open("#{tmp_path}/pogo-script.js").read
   end
 
   def tmp_path

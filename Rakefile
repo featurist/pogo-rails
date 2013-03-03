@@ -12,7 +12,7 @@ end
 
 task default: :test
 
-specname = "coffee-rails.gemspec"
+specname = "pogo-rails.gemspec"
 deps = `git ls-files`.split("\n") - [specname]
 
 file specname => deps do
