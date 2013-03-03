@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "pogo-rails"
 
-  s.add_runtime_dependency 'pogo-script', '>= 0.3.1'
+  s.add_runtime_dependency 'pogo-script', '>= 0.0.2'
   s.add_runtime_dependency 'railties',      '>= 4.0.0.beta', '< 5.0'
 
   s.files         = [".gitignore",".travis.yml","Gemfile","MIT-LICENSE","README.markdown","Rakefile","pogo-rails.gemspec","lib/assets/javascripts/pogo-script.js.erb","lib/pogo-rails.rb","lib/pogo/rails/engine.rb","lib/pogo/rails/template_handler.rb","lib/pogo/rails/version.rb","lib/rails/generators/pogo/assets/assets_generator.rb","lib/rails/generators/pogo/assets/templates/javascript.js.pogo","test/assets_generator_test.rb","test/assets_test.rb","test/controller_generator_test.rb","test/scaffold_generator_test.rb","test/support/routes.rb","test/support/site/index.js.pogo","test/template_handler_test.rb","test/test_helper.rb"]
